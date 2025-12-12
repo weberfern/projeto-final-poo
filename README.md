@@ -1,9 +1,9 @@
 # Projeto Quiz Educacional
 
 ## INTEGRANTES:
-- JEFFERSON RODRIGUES DE OLIVEIRA -- RESPONSÁVEL PELAS CLASSES | Pergunta | E | PerguntaMultiplaEscolha |
-- MARCELO DOS SANTOS ALVES -- RESPONSÁVEL PELAS CLASSES Quiz
-- WEBER FERNANDES DA SILVA -- RESPONSÁVEL PELAS CLASSES | Usuario | E | Tentativa |
+- JEFFERSON RODRIGUES DE OLIVEIRA -- Responsável pelas classes | Pergunta | E | PerguntaMultiplaEscolha |
+- MARCELO DOS SANTOS ALVES -- Responsável pela classe Quiz
+- WEBER FERNANDES DA SILVA -- Responsável pelas classes | Usuario | E | Tentativa |
 
 ## PRINCIPAIS CLASSES
 Class: Pergunta
