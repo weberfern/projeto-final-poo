@@ -7,8 +7,8 @@
 
 ## PRINCIPAIS CLASSES
 Classe: Pergunta
-Atributos: enunciado, alternativas, resposta, dificuldade, tema
-Métodos: salvar, atualizar, deletar, mostrar, verificar_resposta, mostrar_resposta
+- Atributos: enunciado, alternativas, resposta, dificuldade, tema
+- Métodos: salvar, atualizar, deletar, mostrar, verificar_resposta, mostrar_resposta
 
 Classe: Quiz
 - Atributos: titulo, perguntas, pontos_max, num_tentativas, tempo_limite
