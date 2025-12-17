@@ -55,6 +55,25 @@ class Tentativa:
     def tempo_total(self, tempo_total):
         self.__tempo_total = tempo_total
 
+    def registrar_resposta(self, cod_pergunta, resposta_selecionada):
+        """
+        Registra a resposta do usuário para uma pergunta específica.
+        
+        Args:
+            cod_pergunta: Identificador único da pergunta
+            resposta_selecionada: Resposta selecionada pelo usuário
+        """
+        if not isinstance(self.__respostas_dadas, dict):
+            self.__respostas_dadas = {}
+        
+        self.__respostas_dadas[cod_pergunta] = resposta_selecionada
+    
+    def finalizar_tentativa(self):
+        pass
+
+    def gerar_gabarito(self):
+        pass
+    
     def salvar(self):
         pass
     
@@ -67,11 +86,3 @@ class Tentativa:
     def deletar(self):
         pass
     
-    def registrar_resposta(self):
-        pass
-    
-    def finalizar_tentativa(self):
-        pass
-
-    def gerar_gabarito(self):
-        pass
