@@ -5,6 +5,10 @@ class Usuario:
         self.id = id
         self.historico_tentativas = historico_tentativas
 
+    #####################################################
+    ### GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ####
+    #####################################################
+    
     @property
     def nome(self):
         return self.__nome
@@ -37,9 +41,13 @@ class Usuario:
     def historico_tentativas(self, historico_tentativas):
         self.__historico_tentativas = historico_tentativas
 
+    ######################################################
+    ###            MÉTODOS DA CLASSE USUARIO           ###
+    ######################################################
+
     def tentar_quiz (self):
         pass
-    
+
     def salvar (self):
         pass
 

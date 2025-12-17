@@ -7,6 +7,10 @@ class Tentativa:
         self.taxa_acerto = taxa_acerto
         self.tempo_total = tempo_total
 
+    #####################################################
+    ### GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ####
+    #####################################################
+    
     @property
     def quiz_referencia(self):
         return self.__quiz_referencia
@@ -55,11 +59,15 @@ class Tentativa:
     def tempo_total(self, tempo_total):
         self.__tempo_total = tempo_total
 
+    ######################################################
+    ###            MÉTODOS DA CLASSE TENTATIVA         ###
+    ######################################################
+
     def registrar_resposta(self, cod_pergunta, resposta_selecionada):
         """
         Registra a resposta do usuário para uma pergunta específica.
         
-        Args:
+        Argumentos:
             cod_pergunta: Identificador único da pergunta
             resposta_selecionada: Resposta selecionada pelo usuário
         """
