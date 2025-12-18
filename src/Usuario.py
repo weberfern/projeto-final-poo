@@ -1,14 +1,16 @@
+from Tentativa import Tentativa
+
 class Usuario:
-    def __init__ (self, nome, email, id, historico_tentativas):
+    def __init__ (self, nome, email, id):
         self.nome = nome
         self.email = email
         self.id = id
-        self.historico_tentativas = historico_tentativas
+        self.historico_tentativas = []
 
     #####################################################
     ### GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ####
     #####################################################
-    
+
     @property
     def nome(self):
         return self.__nome
@@ -45,8 +47,8 @@ class Usuario:
     ###            MÉTODOS DA CLASSE USUARIO           ###
     ######################################################
 
-    def tentar_quiz (self):
-        pass
+    def tentar_quiz (self, id_quiz):
+        tentativa = Tentativa()
 
     def salvar (self):
         pass

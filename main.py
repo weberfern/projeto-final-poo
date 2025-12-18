@@ -1,2 +1,16 @@
-from Usuario import Usuario
-from Tentativa import Tentativa
+from src.Usuario import Usuario
+from src.Tentativa import Tentativa
+
+user1 = Usuario("Ana", "ana@ufca.edu.br", 1)
+
+iniciar_quiz = input("Deseja iniciar um quiz? (s/n): ")
+
+if iniciar_quiz.lower() == 's':
+    print("Número do quiz: - Título: - ")
+    print("1 - Quem descobriu o Brasil?")
+    print("2 - Qual a capital da França?")
+    print("3 - Qual é a fórmula da água?")
+    print("4 - Quem escreveu 'Dom Casmurro'?")
+    escolha_quiz = input("Escolha o número do quiz que deseja iniciar: ")
+
+user1.tentar_quiz(escolha_quiz)

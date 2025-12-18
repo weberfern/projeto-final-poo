@@ -1,11 +1,8 @@
 class Tentativa:
-    def __init__ (self, quiz_referencia, usuario_referencia, respostas_dadas, pontuacao_obtida, taxa_acerto, tempo_total):
+    def __init__ (self, quiz_referencia, usuario_referencia):
         self.quiz_referencia = quiz_referencia
         self.usuario_referencia = usuario_referencia
-        self.respostas_dadas = respostas_dadas
-        self.pontuacao_obtida = pontuacao_obtida
-        self.taxa_acerto = taxa_acerto
-        self.tempo_total = tempo_total
+        self.respostas_dadas = {}
 
     #####################################################
     ### GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ####
