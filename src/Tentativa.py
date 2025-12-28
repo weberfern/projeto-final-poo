@@ -3,6 +3,9 @@ class Tentativa:
         self.quiz_referencia = quiz_referencia
         self.usuario_referencia = usuario_referencia
         self.respostas_dadas = {}
+        self.pontuacao_obtida = pontuacao_obtida
+        self.taxa_acerto = taxa_acerto
+        self.tempo_total = tempo_total
 
     #####################################################
     ### GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ####
