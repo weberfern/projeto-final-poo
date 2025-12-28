@@ -1,8 +1,10 @@
+from Tentativa import Tentativa
+
 class Usuario:
-    def __init__ (self, cod_usuario: int, nome: str, email: str, historico_tentativas: list):
+    def __init__ (self, nome, email, id, historico_tentativas):
         self.nome = nome
         self.email = email
-        self.cod_usuario = cod_usuario
+        self.id = id
         self.historico_tentativas = historico_tentativas
 
     @property
@@ -38,6 +40,12 @@ class Usuario:
         self.__historico_tentativas = value
 
     def mostrar (self):
+        pass
+    
+    def atualizar (self):
+        pass
+    
+    def deletar (self):
         pass
     
     def tentar_quiz (self):
