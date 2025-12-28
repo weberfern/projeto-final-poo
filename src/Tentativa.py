@@ -1,5 +1,5 @@
 class Tentativa:
-    def __init__ (self, quiz_referencia: int, usuario_referencia: int, respostas_dadas: int, pontuacao_obtida: int, taxa_acerto: int, tempo_total: int):
+    def __init__ (self, quiz_referencia: int, usuario_referencia: int, respostas_dadas: dict, pontuacao_obtida: int, taxa_acerto: int, tempo_total: int):
         self.quiz_referencia = quiz_referencia
         self.usuario_referencia = usuario_referencia
         self.respostas_dadas = {}
