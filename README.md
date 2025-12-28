@@ -19,7 +19,7 @@
 - Métodos: adicionar_pergunta, remover_pergunta, salvar, atualizar, deletar, mostrar, calcular_pontuacao, iniciar_execucao
 
 **Class: Usuario**
-- Atributos: nome, email, id, historico_tentativas
+- Atributos: cod_usuario, nome, email, historico_tentativas
 - Métodos: salvar, mostrar, atualizar, deletar, tentar_quiz
 
 **Class: Tentativa**

@@ -1,5 +1,5 @@
 class Pergunta:
-    def __init__ (self, enunciado, dificuldade, tema):
+    def __init__ (self, enunciado: str, dificuldade: str, tema: str):
         self.enunciado = enunciado
         self. dificuldade = dificuldade
         self.tema = tema
