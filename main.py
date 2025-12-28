@@ -1,7 +1,6 @@
 from src.Usuario import Usuario
-from src.Tentativa import Tentativa
 
-user1 = Usuario(1, "Ana", "ana@ufca.edu.br")
+user1 = Usuario(1, "Ana", "ana@ufca.edu.br", [])
 
 iniciar_quiz = input("Deseja iniciar um quiz? (s/n): ")
 

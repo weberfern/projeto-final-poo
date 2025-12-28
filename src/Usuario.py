@@ -1,5 +1,3 @@
-from Tentativa import Tentativa
-
 class Usuario:
     def __init__ (self, cod_usuario: int, nome: str, email: str, historico_tentativas: list):
         self.cod_usuario = cod_usuario
