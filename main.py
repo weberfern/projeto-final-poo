@@ -11,5 +11,9 @@ if iniciar_quiz.lower() == 's':
     print("3 - Qual é a fórmula da água?")
     print("4 - Quem escreveu 'Dom Casmurro'?")
     escolha_quiz = input("Escolha o número do quiz que deseja iniciar: ")
+else:
+    print("Quiz não iniciado.")
+    escolha_quiz = None
 
-user1.tentar_quiz(escolha_quiz)
+if escolha_quiz is not None:
+    user1.tentar_quiz(escolha_quiz)
