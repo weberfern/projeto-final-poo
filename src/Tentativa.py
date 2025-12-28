@@ -56,6 +56,10 @@ class Tentativa:
     def tempo_total(self, value):
         self.__tempo_total = value
 
+    #####################################################
+    ###              MÉTODOS DA CLASSE               ####
+    #####################################################
+
     def registrar_tentativa(self):
         pass
 

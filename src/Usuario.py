@@ -7,6 +7,10 @@ class Usuario:
         self.email = email
         self.historico_tentativas = historico_tentativas
 
+    #####################################################
+    ### GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ####
+    #####################################################
+
     @property
     def cod_usuario (self):
         return self.__cod_usuario
@@ -39,5 +43,12 @@ class Usuario:
     def historico_tentativas(self, value):
         self.__historico_tentativas = value
   
+    #####################################################
+    ###              MÉTODOS DA CLASSE               ####
+    #####################################################
+
     def tentar_quiz (self):
+        pass
+
+    def visualizar_historico (self):
         pass
