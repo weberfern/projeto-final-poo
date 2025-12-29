@@ -1,4 +1,4 @@
-from .src import Usuario
+from src.Usuario import Usuario
 
 user1 = Usuario(1, "Ana", "ana@ufca.edu.br", [])
 
