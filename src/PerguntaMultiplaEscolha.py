@@ -1,3 +1,5 @@
+# Implementação da classe PerguntaMultiplaEscolha
+
 from src.Pergunta import Pergunta
 
 class PerguntaMultiplaEscolha(Pergunta):
