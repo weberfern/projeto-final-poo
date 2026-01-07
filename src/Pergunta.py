@@ -1,3 +1,5 @@
+#Implementação da classe Pergunta"
+
 class Pergunta:
     def __init__(self, cod_pergunta, enunciado, dificuldade, tema):
         self.cod_pergunta = cod_pergunta
