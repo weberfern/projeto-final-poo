@@ -1,0 +1,1 @@
+#Executar o arquivo main.py para testar a aplicação pela linha de comando
