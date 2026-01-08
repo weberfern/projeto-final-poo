@@ -20,4 +20,4 @@ class PerguntaMultiplaEscolha(Pergunta):
     def exibir_pergunta(self):
         super().exibir_pergunta()
         for i, alternativa in enumerate(self.alternativas):
-            print(f"{i}. {alternativa}")
+            print(f"{i + 1}. {alternativa}")

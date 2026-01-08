@@ -27,6 +27,3 @@ if iniciar_quiz.lower() == 's':
 else:
     print("Quiz não iniciado.")
     escolha_quiz = None
-
-if escolha_quiz is not None:
-    user1.tentar_quiz(escolha_quiz)

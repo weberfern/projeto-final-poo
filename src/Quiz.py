@@ -54,16 +54,34 @@ class Quiz:
     
 
     def iniciar_quiz(self):
+        print(f"--- Iniciando Quiz: {self.titulo} ---")
         pontuacao_atual = 0
+
+
         for pergunta in self.perguntas:
+            print("\n--------------------------------")
+
             pergunta.exibir_pergunta()
-            resposta_usuario = input("Digite o número da sua resposta: ")
-            if pergunta.verificar_resposta(int(resposta_usuario)):
-                pontuacao_atual += 1
-                print("Resposta correta!")
-            else:
-                print("Resposta incorreta.")
-        print(f"Quiz finalizado! Sua pontuação: {pontuacao_atual}/{self.pontos_max}")
+
+            try:
+                resposta_usuario = input("Digite o número da sua resposta: ")
+                indice_ajustado = int(resposta_usuario) - 1 #Removendo o 0 do índice de numeração ficando 1, 2, 3, 4
+
+
+                if pergunta.verificar_resposta(int(indice_ajustado)):
+                    print("Resposta registrada com sucesso!")
+                    pontuacao_atual += 1
+                else:
+                    print("Resposta registrada com sucesso!")
+                
+            except ValueError:
+                print("Entrada inválida. Por favor, insira um número correspondente à sua resposta.")
+
+
+        print("=================================")
+        print(f"Quiz finalizado!")
+        print(f"Sua pontuação final: {pontuacao_atual} de {len(self.perguntas)}")
+        print("=================================")
 
     def exibir_perguntas(self):
         pass 
