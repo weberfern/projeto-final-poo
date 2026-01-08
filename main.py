@@ -13,7 +13,7 @@ p4 = PerguntaMultiplaEscolha(4, "Quem escreveu 'Dom Casmurro'?", "Médio", "Lite
 lista_perguntas = [p1, p2, p3, p4]  # p1, p2, p3, p4 são instâncias de PerguntaMultiplaEscolha
 
 # Criação de um quiz
-quiz1 = Quiz("Quiz de Conhecimentos Gerais", lista_perguntas, 4, 3, 60)
+quiz1 = Quiz("Quiz de Conhecimentos Gerais", lista_perguntas, 4, 3, 5) # Título do quiz, lista de perguntas, pontos máximos, número de tentativas, tempo limite em minutos
 
 # Criação de um usuário
 user1 = Usuario(1, "Ana", "ana@ufca.edu.br", [])
