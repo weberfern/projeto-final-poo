@@ -54,7 +54,16 @@ class Quiz:
     
 
     def iniciar_quiz(self):
-        pass 
+        pontuacao_atual = 0
+        for pergunta in self.perguntas:
+            pergunta.exibir_pergunta()
+            resposta_usuario = input("Digite o número da sua resposta: ")
+            if pergunta.verificar_resposta(int(resposta_usuario)):
+                pontuacao_atual += 1
+                print("Resposta correta!")
+            else:
+                print("Resposta incorreta.")
+        print(f"Quiz finalizado! Sua pontuação: {pontuacao_atual}/{self.pontos_max}")
 
     def exibir_perguntas(self):
         pass 
