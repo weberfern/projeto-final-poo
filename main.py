@@ -1,4 +1,4 @@
-from src import Usuario
+from src import Usuario, Quiz, PerguntaMultiplaEscolha
 
 user1 = Usuario(1, "Ana", "ana@ufca.edu.br", [])
 
