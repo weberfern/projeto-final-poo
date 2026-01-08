@@ -17,7 +17,7 @@ class Pergunta:
             raise ValueError("Dificuldade inválida.")
         self._dificuldade = valor
 
-    def mostrar(self):
+    def exibir_pergunta(self):
         print(
             f"[{self.cod_pergunta}] {self.enunciado} "
             f"({self.dificuldade} • {self.tema})"

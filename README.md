@@ -8,7 +8,7 @@
 ## PRINCIPAIS CLASSES
 **Class: Pergunta**
 - Atributos: cod_pergunta, enunciado, dificuldade, tema
-- Métodos: salvar, atualizar, deletar, mostrar, verificar_resposta, mostrar_resposta, obter_dificuldade
+- Métodos: salvar, atualizar, deletar, exibir_pergunta, verificar_resposta, mostrar_resposta, obter_dificuldade
 
 **Class: PerguntaMultiplaEscolha(Pergunta)**
 - Atributos: cod_pergunta, enunciado, alternativas, resposta_indice, dificuldade, tema
