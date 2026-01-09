@@ -1,4 +1,6 @@
-#Implementação da classe Pergunta"
+#Implementação da classe base Pergunta"
+#Responsável por armazenar dados comuns a todas as perguntas do quiz
+
 
 class Pergunta:
     def __init__(self, cod_pergunta, enunciado, dificuldade, tema):
