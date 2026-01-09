@@ -3,7 +3,11 @@
 from src.Pergunta import Pergunta
 
 class PerguntaMultiplaEscolha(Pergunta):
+    """
+    Representa uma pergunta de múltipla escolha.
+    Possui alternativas e um índice que indica a resposta correta.
     
+    """
     def __init__(self, cod_pergunta, enunciado, dificuldade, tema, alternativas, resposta_indice):
         
         super().__init__(cod_pergunta, enunciado, dificuldade, tema)
