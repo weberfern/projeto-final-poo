@@ -16,12 +16,11 @@ class PerguntaMultiplaEscolha(Pergunta):
         self.resposta_indice = resposta_indice
         
     def verificar_resposta(self, resposta_usuario):
-        if resposta_usuario == self.resposta_indice:
-            return True
-        else:
-            return False
+        """
+        Verifica se a resposta do usuário está correta
         
-    def exibir_pergunta(self):
-        super().exibir_pergunta()
-        for i, alternativa in enumerate(self.alternativas):
-            print(f"{i + 1}. {alternativa}")
+        """
+        return resposta_usuario == self.resposta_indice
+
+    
+    
