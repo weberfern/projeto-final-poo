@@ -7,7 +7,7 @@ class Quiz:
         self.num_tentativas = num_tentativas
         self.tempo_limite = tempo_limite
 
-    ########################## GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ##############################
+    ########################## GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ##########################
     
 
     @property
@@ -50,7 +50,7 @@ class Quiz:
     def tempo_limite(self, value):
         self.__tempo_limite = value
 
-    ################################### MÉTODOS DA CLASSE##################################
+    ################################# MÉTODOS DA CLASSE ##################################
     
 
     def iniciar_quiz(self):
