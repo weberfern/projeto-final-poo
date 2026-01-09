@@ -49,7 +49,15 @@ class Pergunta:
         print(f"Pergunta {self.cod_pergunta} deletada.")
 
     def verificar_resposta(self, resposta_usuario):
+        """
+        Deve ser implementado pelas subclasses para verificar
+        se a resposta do usuário está correta
+        """
         raise NotImplementedError()
 
     def mostrar_resposta(self):
+        """
+        Deve ser implementado pelas subclasses para exibir
+        a resposta correta da pergunta
+        """
         raise NotImplementedError()
