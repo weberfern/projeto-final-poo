@@ -1,8 +1,13 @@
-#Implementação da classe base Pergunta"
-#Responsável por armazenar dados comuns a todas as perguntas do quiz
-
+# Classe Pergunta
+# Representa uma pergunta genérica do sistema de quiz
+# Serve como classe base para outros tipos de pergunta
 
 class Pergunta:
+    """
+    Classe base que define os atributos e comportamentos comuns
+    a todas as perguntas do quiz.
+    """
+
     def __init__(self, cod_pergunta, enunciado, dificuldade, tema):
         self.cod_pergunta = cod_pergunta
         self.enunciado = enunciado
