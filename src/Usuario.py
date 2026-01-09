@@ -45,8 +45,8 @@ class Usuario:
     ###              MÉTODOS DA CLASSE               ####
     #####################################################
 
-    def tentar_quiz (self):
-        pass
+    def tentar_quiz (self, quiz):
+        quiz.iniciar_quiz()
 
     def visualizar_historico (self):
         pass
