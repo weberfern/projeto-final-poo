@@ -33,3 +33,5 @@ visualizar_historico = input("Deseja visualizar o histórico de tentativas? (s/n
 if visualizar_historico.lower() == 's':
     print(f"\n--- Verificando Histórico ---")
     user1.visualizar_historico()
+else:
+    print("Quiz finalizado.")
