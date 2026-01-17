@@ -83,6 +83,8 @@ class Quiz:
         print(f"Sua pontuação final: {pontuacao_atual} de {len(self.perguntas)}")
         print("=================================")
 
+        return pontuacao_atual
+
     def exibir_perguntas(self):
         pass 
 
