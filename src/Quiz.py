@@ -4,10 +4,7 @@ class Quiz:
         self.titulo = titulo 
         self.perguntas = perguntas
         self.pontos_max = pontos_max
-        self.num_tentativas = num_tentativas
-        self.tempo_limite = tempo_limite
-
-    ########################## GETTERS E SETTERS ##########################
+        self.num_tentativas = ############## GETTERS E SETTERS ##############
 
     @property
     def titulo(self):
@@ -49,7 +46,7 @@ class Quiz:
     def tempo_limite(self, value):
         self.__tempo_limite = value
 
-    ################################# MÉTODOS ##################################
+   ################ MÉTODOS ################
 
     def iniciar_quiz(self):
         print(f"--- Iniciando Quiz: {self.titulo} ---")
