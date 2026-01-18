@@ -4,7 +4,10 @@ class Quiz:
         self.titulo = titulo 
         self.perguntas = perguntas
         self.pontos_max = pontos_max
-        self.num_tentativas = ############## GETTERS E SETTERS ##############
+        self.num_tentativas = num_tentativas
+        self.tempo_limite = tempo_limite
+
+    ############## GETTERS E SETTERS ##############
 
     @property
     def titulo(self):
