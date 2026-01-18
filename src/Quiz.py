@@ -1,11 +1,15 @@
 class Quiz:
-    def __init__(self, titulo: str, perguntas: list, num_tentativas: int, tempo_limite: int):
+    
+    def __init__(self, titulo: str, perguntas: list, pontos_max: int, num_tentativas: int, tempo_limite: int):
         self.titulo = titulo 
         self.perguntas = perguntas
+        self.pontos_max = pontos_max
         self.num_tentativas = num_tentativas
         self.tempo_limite = tempo_limite
 
-    ########################## GETTERS E SETTERS ##########################
+    ########################## GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ##########################
+    
+
     @property
     def titulo(self):
         return self.__titulo
@@ -23,6 +27,14 @@ class Quiz:
         self.__perguntas = value
     
     @property
+    def pontos_max(self):
+        return self.__pontos_max
+
+    @pontos_max.setter
+    def pontos_max(self, value):
+        self.__pontos_max = value
+    
+    @property
     def num_tentativas(self):
         return self.__num_tentativas
 
@@ -38,62 +50,49 @@ class Quiz:
     def tempo_limite(self, value):
         self.__tempo_limite = value
 
-    ################################# MÉTODOS PRINCIPAIS ##################################
+    ################################# MÉTODOS DA CLASSE ##################################
+    
+
     def iniciar_quiz(self):
         print(f"--- Iniciando Quiz: {self.titulo} ---")
-        pontuacao_total_obtida = 0
-        
-        # Dicionário de pesos conforme regra de negócio
-        pesos = {"Fácil": 1, "Médio": 2, "Difícil": 3}
+        pontuacao_atual = 0
 
-        for pergunta in self:  # Usa o __iter__ implementado
+
+        for pergunta in self.perguntas:
+            print("\n--------------------------------")
+
             pergunta.exibir_pergunta()
+
             try:
-                resposta = int(input("Digite o número da sua resposta: ")) - 1
-                if pergunta.verificar_resposta(resposta):
-                    print("Você acertou!")
-                    pontuacao_total_obtida += pesos.get(pergunta.dificuldade, 1)
+                resposta_usuario = input("Digite o número da sua resposta: ")
+                indice_ajustado = int(resposta_usuario) - 1 #Removendo o 0 do índice de numeração ficando 1, 2, 3, 4
+
+
+                if pergunta.verificar_resposta(int(indice_ajustado)):
+                    print("Resposta registrada com sucesso!")
+                    pontuacao_atual += 1
                 else:
-                    print("Você errou!")
+                    print("Resposta registrada com sucesso!")
+                
             except ValueError:
-                print("Entrada inválida.")
+                print("Entrada inválida. Por favor, insira um número correspondente à sua resposta.")
+
 
         print("=================================")
         print(f"Quiz finalizado!")
-        print(f"Sua pontuação final: {pontuacao_total_obtida} de {self.pontos_max}")
+        print(f"Sua pontuação final: {pontuacao_atual} de {len(self.perguntas)}")
         print("=================================")
 
-        return pontuacao_total_obtida
+        return pontuacao_atual
 
     def exibir_perguntas(self):
-        print(f"--- Perguntas do Quiz: {self.titulo} ---")
-        for pergunta in self.perguntas:
-            pergunta.exibir_pergunta()
+        pass 
 
-    @property
-    def pontos_max(self):
-        # Calcula automaticamente a pontuação máxima com base nas dificuldades
-        pesos = {"Fácil": 1, "Médio": 2, "Difícil": 3}
-        return sum(pesos.get(p.dificuldade, 1) for p in self.perguntas)
+    def calcular_pontuacao_max(self):
+        pass 
 
     def verificar_tentativas(self):
-        if self.num_tentativas <= 0:
-            print("Número de tentativas esgotado.")
-            return False
-        return True
+        pass 
 
     def verificar_tempo_limite(self):
-        if self.tempo_limite <= 0:
-            print("Tempo limite expirado.")
-            return False
-        return True
-
-    ################################# MÉTODOS ESPECIAIS ##################################
-    def __len__(self):
-        return len(self.perguntas)
-
-    def __iter__(self):
-        return iter(self.perguntas)
-
-    def __str__(self):
-        return f"Quiz: {self.titulo} | Perguntas: {len(self)} | Pontos Máx: {self.pontos_max}"
+        pass
