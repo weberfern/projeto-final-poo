@@ -1,3 +1,5 @@
+from .Tentativa import Tentativa
+
 class Usuario:
     def __init__ (self, cod_usuario: int, nome: str, email: str, historico_tentativas: list):
         self.cod_usuario = cod_usuario
@@ -46,7 +48,30 @@ class Usuario:
     #####################################################
 
     def tentar_quiz (self, quiz):
-        quiz.iniciar_quiz()
+        pontuacao = quiz.iniciar_quiz()
+
+        if pontuacao is None:
+            print("[AVISO] O Quiz não retornou pontuação.")
+            pontuacao = 0
+        
+        nova_tentativa = Tentativa(
+            quiz_referencia = quiz, 
+            usuario_referencia = self,
+            respostas_dadas = {},
+            pontuacao_obtida = pontuacao,
+            tempo_total = 0,
+        )
+
+        # REGISTRA NO HISTÓRICO
+        self.historico_tentativas.append(nova_tentativa)
+        nova_tentativa.registrar_tentativa()
+        print(f"[INFO] Usuário {self.nome} completou o quiz '{quiz.titulo}' com pontuação {pontuacao}/{quiz.pontos_max}.")
 
     def visualizar_historico (self):
-        pass
+        if not self.historico_tentativas:
+            print(f"O usuário {self.nome} ainda não possui tentativa registrada no histórico.")
+        else:
+            print(f"--- Histórico de Tentativas do Usuário {self.nome} ---")
+            for i, tentativa in enumerate(self.historico_tentativas):
+                print(f"Registro #{i+1}")
+                tentativa.mostrar_tentativa()

@@ -27,3 +27,11 @@ if iniciar_quiz.lower() == 's':
 else:
     print("Quiz não iniciado.")
     escolha_quiz = None
+
+# Visualizar o histórico de tentativas do usuário
+visualizar_historico = input("Deseja visualizar o histórico de tentativas? (s/n): ")
+if visualizar_historico.lower() == 's':
+    print(f"\n--- Verificando Histórico ---")
+    user1.visualizar_historico()
+else:
+    print("Quiz finalizado.")

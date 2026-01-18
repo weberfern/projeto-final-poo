@@ -1,10 +1,12 @@
-from src import Usuario
-
 class Tentativa:
-    def __init__ (self, quiz_referencia: int, usuario_referencia: int, respostas_dadas: int, pontuacao_obtida: int, taxa_acerto: int, tempo_total: int):
+    def __init__ (self, quiz_referencia: int, usuario_referencia: int, respostas_dadas: dict, pontuacao_obtida: int, tempo_total: int):
         self.quiz_referencia = quiz_referencia
         self.usuario_referencia = usuario_referencia
-        self.respostas_dadas = {}
+        self.respostas_dadas = respostas_dadas
+        self.pontuacao_obtida = pontuacao_obtida
+        self.tempo_total = tempo_total
+        #CALCULA A TAXA DE ACERTO AO INICIAR A TENTATIVA
+        self.taxa_acerto = self.calcular_taxa_acerto()
 
     #####################################################
     ### GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ####
@@ -63,22 +65,30 @@ class Tentativa:
     #####################################################
 
     def registrar_tentativa(self):
-        pass
+        #SIMULA O REGISTRO DA TENTATIVA (POR ENQUANTO, APENAS IMPRIME UMA MENSAGEM)
+        print(f" > Tentativa salva para o usuário {self.usuario_referencia.nome} no quiz {self.quiz_referencia.titulo}.")
 
     def calcular_pontuacao(self):
-        pass
+        return self.pontuacao_obtida
 
     def calcular_taxa_acerto(self):
-        pass
+        if self.quiz_referencia.pontos_max == 0:
+            return 0
+        return (self.pontuacao_obtida / self.quiz_referencia.pontos_max) * 100
 
     def calcular_tempo_total(self):
-        pass
+        return self.tempo_total
 
     def mostrar_tentativa(self):
-        pass
+        print(f"--- Detalhes da Tentativa ---")
+        print(f"Quiz: {self.quiz_referencia.titulo}")
+        print(f"Usuário: {self.usuario_referencia.nome}")
+        print(f"Pontuação Obtida: {self.pontuacao_obtida}/{self.quiz_referencia.pontos_max}")
+        print(f"Taxa de Acerto: {self.taxa_acerto}%")
+        print(f"Tempo Total: {self.tempo_total} minutos")
 
     def atualizar_tentativa(self):
-        pass
-
+        print(" > Tentativa atualizada.")
+        
     def deletar_tentativa(self):
-        pass
+        print(" > Tentativa deletada.")
