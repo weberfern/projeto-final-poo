@@ -7,8 +7,7 @@ class Quiz:
         self.num_tentativas = num_tentativas
         self.tempo_limite = tempo_limite
 
-    ########################## GETTERS E SETTERS DE CADA ATRIBUTO DA CLASSE ##########################
-    
+    ########################## GETTERS E SETTERS ##########################
 
     @property
     def titulo(self):
@@ -50,49 +49,52 @@ class Quiz:
     def tempo_limite(self, value):
         self.__tempo_limite = value
 
-    ################################# MÉTODOS DA CLASSE ##################################
-    
+    ################################# MÉTODOS ##################################
 
     def iniciar_quiz(self):
         print(f"--- Iniciando Quiz: {self.titulo} ---")
         pontuacao_atual = 0
 
-
         for pergunta in self.perguntas:
             print("\n--------------------------------")
-
             pergunta.exibir_pergunta()
 
             try:
                 resposta_usuario = input("Digite o número da sua resposta: ")
-                indice_ajustado = int(resposta_usuario) - 1 #Removendo o 0 do índice de numeração ficando 1, 2, 3, 4
+                indice_ajustado = int(resposta_usuario) - 1
 
-
-                if pergunta.verificar_resposta(int(indice_ajustado)):
+                if pergunta.verificar_resposta(indice_ajustado):
                     print("Resposta registrada com sucesso!")
                     pontuacao_atual += 1
                 else:
                     print("Resposta registrada com sucesso!")
-                
-            except ValueError:
-                print("Entrada inválida. Por favor, insira um número correspondente à sua resposta.")
 
+            except ValueError:
+                print("Entrada inválida. Por favor, insira um número.")
 
         print("=================================")
-        print(f"Quiz finalizado!")
+        print("Quiz finalizado!")
         print(f"Sua pontuação final: {pontuacao_atual} de {len(self.perguntas)}")
         print("=================================")
 
         return pontuacao_atual
 
     def exibir_perguntas(self):
-        pass 
+        print(f"--- Perguntas do Quiz: {self.titulo} ---")
+        for pergunta in self.perguntas:
+            pergunta.exibir_pergunta()
 
     def calcular_pontuacao_max(self):
-        pass 
+        return self.pontos_max
 
     def verificar_tentativas(self):
-        pass 
+        if self.num_tentativas <= 0:
+            print("Número de tentativas esgotado.")
+            return False
+        return True
 
     def verificar_tempo_limite(self):
-        pass
+        if self.tempo_limite <= 0:
+            print("Tempo limite expirado.")
+            return False
+        return True
